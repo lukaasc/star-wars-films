@@ -1,0 +1,44 @@
+<div class="card">
+    <h2 class="card-header">{{$ctrl.film.title}} - Episode: {{$ctrl.film.episode_id}}</h2>
+    <div class="card-body">
+        <p class="card-text">{{$ctrl.film.opening_crawl}}</p>
+
+        <div class="row info-section">
+            <span class="col col-sm-4 col-md-4 col-lg-4">
+                {{$ctrl.film.release_date}}
+                <label>Released</label>
+            </span>
+
+            <span class="col col-sm-4 col-md-4 col-lg-4">
+                {{$ctrl.film.director}}
+                <label>Director</label>
+            </span>
+
+            <span class="col col-sm-4 col-md-4 col-lg-4">
+                {{$ctrl.film.producer}}
+                <label>Producer</label>
+            </span>
+
+        </div>
+    </div>
+
+    <div class="card-footer">
+        <a href="" data-ng-click="$ctrl.loadCharactersList()">
+            Check out characters list for this film!
+            <i class="fas fa-angle-double-down fa-blink" data-ng-if="!$ctrl.loading && !$ctrl.isExpanded"></i>
+            <i class="fas fa-cog fa-spin" data-ng-if="$ctrl.loading"></i>
+        </a>
+
+        <i class="fas fa-fw fa-angle-double-up fa-blink" data-ng-if="!$ctrl.loading && $ctrl.chars && $ctrl.isExpanded" data-ng-click="$ctrl.collapse()"></i>
+
+        <div class="characters-section" data-ng-if="$ctrl.isExpanded">
+            <ul class="list-group">
+                <li class="list-group-item" data-ng-repeat="char in $ctrl.chars">
+                    <label>Name:</label> {{char.data.name}}
+                    <label>Eye Color:</label> {{char.data.eye_color}}
+                    <label>Gender:</label> {{char.data.gender}}
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>

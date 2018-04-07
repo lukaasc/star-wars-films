@@ -1,0 +1,10 @@
+<div class="main">
+    <h1>
+        Star Wars | Films
+    </h1>
+
+    <spinner data-ng-if="$ctrl.loading"></spinner>
+    <section class="film-cards" data-ng-repeat="film in $ctrl.films | orderBy: 'episode_id'" data-ng-if="!$ctrl.loading">
+        <film-card class="film-card-item" film="film"></film-card>
+    </section>
+</div>

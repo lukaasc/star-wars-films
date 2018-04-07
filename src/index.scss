@@ -1,0 +1,31 @@
+@font-face {
+  font-family: 'Starwars';
+  src: url('/assets/font/StarWars.ttf') format('truetype');
+}
+
+body{
+  background: hsla(0, 0%, 0%, 0.7) url('/assets/img/bg-image.jpg') no-repeat center center fixed;
+  background-size: cover;
+  background-blend-mode: overlay;
+
+  .main{
+    h1{
+      position: relative;
+      font-family: Starwars;
+      font-size: 4em;
+      text-align: center;
+      color: #c8c8c8;
+    }
+
+    .film-cards{
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+
+      .film-card-item {
+        margin: 10px;
+        max-width: 80%;
+      }
+    }
+  }
+}

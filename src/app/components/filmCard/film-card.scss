@@ -1,0 +1,63 @@
+@keyframes fa-blink {
+  0% { opacity: 1; }
+  100% { opacity: 0.3; }
+}
+$background-color: #25252d94;
+
+.fa-blink{
+  animation: fa-blink .75s linear infinite;
+}
+
+.card{
+  background-color: $background-color;
+  box-shadow: 0px 0px 4px 0px #e1cf0075;
+  color: #c8c8c8;
+
+  .card-header{
+    border: none;
+  }
+
+  .card-text{
+    text-align: justify;
+  }
+  
+  .info-section{
+    text-align: center;
+    label{
+      display: block;
+      font-weight: bold;
+    }
+  }
+
+  .card-footer{
+    border-top: 1px solid #e1cf002e;
+    text-align: center;
+    a{
+      font-family: Starwars;
+    }
+    a, .fa-angle-double-up{
+    font-size: 1.2em;
+    color: #e1cf00;
+    cursor: pointer;
+    }
+
+    .characters-section{
+      text-align: center;
+      ul{
+        li{
+          background-color: transparent;
+          font-size: 1.2em;
+          text-transform: capitalize;
+          border: 1px solid #e1cf002e;
+          &:hover{
+            background-color: #ffffff12;
+          }
+          label{
+            font-weight: bold;
+            margin-left: 60px;
+          }
+        }
+      }
+    }
+  }
+}
